@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test music application</title>
+    <script src="/Scripts/soundmanager2.js"></script>
+    <script src="/Scripts/soundmanager2-jsmin.js"></script>
+</head>
+<body>
+    <div id="btn-s0" onmousedown="soundManager.play('mySound')">Play the song<div></div></div>
+
+<div>
+    <script>
+        soundManager.setup({
+            url: '/Medias/',
+            flashVersion: 9, 
+            onready: function () {
+                soundManager.createSound({
+                    id: 'mySound',
+                    url: '/Medias/GuiAnhXaNho-BichPhuong-4539289.mp3'
+                });
+            }
+        });
+
+    </script>
+</div>
+</body>
+</html>
